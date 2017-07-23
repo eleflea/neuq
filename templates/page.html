@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href={{ url_for( 'static', filename='css/page.css' ) }} rel="stylesheet">
+    <title>{{ data.title }}</title>
+</head>
+
+<body>
+    <input type="text" name="db" value="{{ data.db }}" style="display: none;">
+    <input type="text" name="num" value="{{ data.num }}" style="display: none;">
+    <input type="text" name="page" value="1" style="display: none;">
+    <div class="container-fluid">
+        <div class="card col-md-12">
+            <table border="1" align='center' bgcolor='#FFFFFF'>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src={{ url_for( 'static', filename='js/page.js' ) }}></script>
+</body>
+
+</html>

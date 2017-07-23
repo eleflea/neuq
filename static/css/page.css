@@ -1,0 +1,48 @@
+body {
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.card {
+    font-size: 20px;
+}
+
+.label-cus {
+    background-color: #eee;
+    color: #666;
+    position: relative;
+    border: 1px solid #a6aaad;
+    cursor: pointer;
+    border-radius: .1em;
+    margin-right: .25em;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.blur {
+	filter: url(#blur);
+	filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='5');
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+.ublur {
+	-webkit-transition: .15s;
+	transition: .15s;
+}
+
+td:hover {
+	cursor: pointer;
+}
+
+td>img {
+	mix-blend-mode: multiply;
+}

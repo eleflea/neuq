@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扶朕起来朕还能学</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href={{ url_for( 'static', filename='css/main.css' ) }}>
+</head>
+
+<body>
+    <div class="container overlay">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-6">
+                <div class="header-container">
+                    <div class="page-header">
+                        <h1>扶朕起来朕还能学
+                            <small>by Eleflea</small>
+                        </h1>
+                    </div>
+                    <p>友情链接：
+                        <span class="link">
+                            <span class="glyphicon glyphicon-link"></span>
+                        <a href="http://www.neumathe.online">http://www.neumathe.online</a>
+                        </span>
+                    </p>
+                    <p>如有任何BUG或建议，请反馈给我的邮箱：
+                        <span class="link">
+                            <span class="glyphicon glyphicon-link"></span>
+                        <a href="mailto:dmzitnzc@gmail.com">dmzitnzc@gmail.com</a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-6 hidden-xs hidden-sm">
+                <div class="header-container">
+                    <div class="page-header2">
+                        <h3>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-search" placeholder="在此处搜索题目、标签、章节">
+                                <span class="input-group-btn">
+                                    <span class="glyphicon glyphicon-search btn btn-search" type="button"></span>
+                                </span>
+                            </div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row hidden-md hidden-lg">
+            <div class="col-xs-12 col-sm-12">
+                <div class="header-container">
+                    <div class="page-header2">
+                        <h3>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-search" placeholder="在此处搜索题目、标签、章节">
+                                <span class="input-group-btn">
+                                    <span class="glyphicon glyphicon-search btn btn-search" type="button"></span>
+                                </span>
+                            </div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for data in datas %}
+            <div class="col-xs-12 col-md-4 col-lg-3">
+                <div class="header-container" id="accordion{{ loop.index }}">
+                    <div class="page-header2">
+                        <h3>{{ data.name }}
+                            <span data-toggle="collapse" data-parent="#accordion{{ loop.index }}" href="#collapse{{ loop.index }}" class="glyphicon glyphicon-chevron-up btn btn-toggle-up"></span>
+                        </h3>
+                    </div>
+                    <div id="collapse{{ loop.index }}" class="in">
+                        {% for e in data.data %}
+                        <a href={{ url_for('show_question', db=data.rep, id=loop.index) }} target="_blank"><span></span></a>
+                        <div class="list">
+                            <p>{{ e[0] }}<span class="badge">{{ e[1] }}</span></p>
+                        </div>
+                        {% else %}
+                        <div class="list">
+                            <p>blank</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src={{ url_for( 'static', filename='js/main.js' ) }}></script>
+</body>
+
+</html>

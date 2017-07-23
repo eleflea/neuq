@@ -1,0 +1,141 @@
+body {
+    color: white;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+body::before {
+    content: ' ';
+    background: url(../img/miku.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    color: #f9d01d;
+}
+
+a:hover {
+    color: #f9d01d;
+}
+
+.header-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: currentColor 5px dashed;
+    padding: 0 15px 10px 15px;
+    margin-top: 15px;
+    transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+
+.glyphicon-link {
+    color: currentColor;
+}
+
+.link:hover {
+    color: #f9d01d;
+}
+
+.page-header2 {
+    margin: 20px 0 0;
+    border-bottom: 1px solid #eee;
+}
+
+.list {
+    border-bottom: 1px dashed #888;
+    padding: 5px 0 0 10px;
+    font-size: medium;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.list:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.list>p {
+    margin-bottom: 5px;
+}
+
+.btn-toggle-up {
+    float: right;
+    padding: 5px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    transform: rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.btn-toggle-up:hover {
+    color: white;
+    text-shadow: 0 0 10px #f9d01d;
+}
+
+.btn-search {
+    top: 0px;
+    bottom: 0px;
+    border: #ccc 2px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    -webkit-transition: all ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: all ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: all ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.btn-search:hover, .btn-search:focus {
+    color: white;
+    border-color: #f9d01d;
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(249, 208, 29, 0.5);
+    box-shadow: 0px 1px 10px 0px rgba(249, 208, 29, 0.5);
+}
+
+.input-search {
+    left: 1px;
+    height: 36px;
+    height: initial;
+    color: white;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 2px solid #ccc;
+}
+
+.input-search:focus {
+    border-color: #f9d01d;
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(249, 208, 29, 0.5);
+    box-shadow: 0px 1px 10px 0px rgba(249, 208, 29, 0.5);
+}
+
+.badge {
+    margin-left: 5px;
+    background-color: rgba(119, 119, 119, 0.75)
+}
